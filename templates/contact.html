@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Контактна інформація</title>
+</head>
+<body>
+    <div class="contact-container">
+        <h2>Контактна інформація</h2>
+        <a href="mailto:dz.redkonazar@gmail.com">Email: dz.redkonazar@gmail.com</a>
+        <a href="tel:+380682026594">Телефон: +380682026594</a>
+        <a href="https://t.me/nzrdk" target="_blank">Telegram</a>
+
+        <div class="contact-form">
+            <h3>Залиште своє повідомлення</h3>
+            <form action="mailto:dz.redkonazar@gmail.com" method="post" enctype="text/plain">
+                <textarea name="message" placeholder="Введіть ваше повідомлення..."></textarea>
+                <button type="submit">Надіслати</button>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <h2>Про нас</h2>
+        <p class="GenericFont">Ми: Редько Назар, Бут Ігор і Малець Артем - розробили цей шедевральний додаток, щоб виконати практичну роботу з інформатики. Назарчик на центральному блокуючому часто зазнає тотального знищення, а Ігарьок кидає назарчика на прогиб. Таким чином сукупність барандачка відповідає усім вимогам сучасного пожежогасіння.</p>
+    </div>
+</body>
+</html>

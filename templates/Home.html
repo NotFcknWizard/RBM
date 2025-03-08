@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8", content="width=device-width"content="height=device-height">
+    <title id = "main">Volleyball Site</title>
+</head>
+    <body>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <h1 class = "header1"> Welcome to the Volleyball Site </h1>
+            <div class="sidebar">
+                <img src="{{ url_for('static', filename='images/ball.jpg') }}" class="small-image">
+                <img src="{{ url_for('static', filename='images/ball.jpg') }}" class="small-image">
+                <img src="{{ url_for('static', filename='images/ball.jpg') }}" class="small-image">
+                <img src="{{ url_for('static', filename='images/ball.jpg') }}" class="small-image">
+                <img src="{{ url_for('static', filename='images/ball.jpg') }}" class="small-image">
+                <img src="{{ url_for('static', filename='images/ball.jpg') }}" class="small-image">
+                <img src="{{ url_for('static', filename='images/ball.jpg') }}" class="small-image">
+            </div>
+            <div class="container">
+                <a href="/registration" class="button">Registration</a>
+                <a href="/about" class="button">Information</a>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Index</title>
+
+</head>
+<body>
+    <form method="POST">
+    <p>Id: {{ reg.id }}</p>
+    <input type="text" name="trainer" value="{{ reg.trainer }}" required>
+    <input type="text" name="place" value="{{ reg.place }}" required>
+    <input type="text" name="price" value="{{ reg.price }}" required>
+    <button type="submit">Apply Changes</button>
+</form>
+
+</body>
+</html>

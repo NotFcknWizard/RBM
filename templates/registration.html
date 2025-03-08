@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="header1">Registration</h1>
+    <table class="table-style">
+        <tr>
+            <th>ID</th>
+            <th>Ціна</th>
+            <th>Тренер</th>
+            <th>Місце</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+        {% for reg in trainer %}
+        <tr>
+            <td>{{ reg.id }}</td>
+            <td>{{ reg.price }}</td>
+            <td>{{ reg.trainer }}</td>
+            <td>{{ reg.place }}</td>
+            <td><a href="/delete/{{ reg.id }}"><img class="small-image" src="{{ url_for('static', filename='images/trash.svg') }}" alt="Delete"></a></td>
+            <td><a href="/change/{{ reg.id }}"><img class="small-image" src="{{ url_for('static', filename='images/change.svg') }}" alt="Edit"></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/add"><img class="small-image" src="{{ url_for('static', filename='images/galka.svg') }}" alt="Add"></a>
+</body>
+</html>
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Document</title>
+    <h1>Poer</h1>
+</head>
+<body>
+<table>
+        <tr>
+            <th>ID</th>
+            <th>Ціна</th>
+            <th>Тренер</th>
+            <th>Місце</th>
+        </tr>
+        {% for reg in trainer %}
+        <tr>
+            <td>{{ reg.id }}</td>
+            <td>{{ reg.price }}</td>
+            <td>{{ reg.trainer }}</td>
+            <td>{{ reg.place }}</td>
+            <td><a href="/delete/{{ reg.id }}"><img src="{{ url_for('static', filename='images/trash.svg') }}" alt="tttt" width='40'></a></td>
+            <td><a href="/change/{{ reg.id }}"><img src="{{ url_for('static', filename='images/change.svg') }}" alt="tttt" width='40'></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+<a href="/add"><img src="{{ url_for('static', filename='images/galka.svg') }}" alt="tttt" width='40'></a>
+</body>
+</html>
