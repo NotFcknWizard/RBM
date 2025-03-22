@@ -33,11 +33,9 @@ body{
     border: 20px;
 }
 
-
-
 .container {
     display: grid;
-    margin-top: 200px;
+    margin: 10% auto;
     justify-items: center;
     grid-gap: 10px;
     align-content: center;
@@ -47,7 +45,6 @@ body{
 
     height: 100px;
     width:  400px;
-    margin-left: 50px;
     padding: 25px;
     align-items: center;
 

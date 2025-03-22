@@ -18,9 +18,15 @@
                 <img src="{{ url_for('static', filename='images/ball.jpg') }}" class="small-image">
                 <img src="{{ url_for('static', filename='images/ball.jpg') }}" class="small-image">
             </div>
+            {% if current_user.is_authenticated %}
+            <p class="header1">Привіт, {{ current_user.username }}! <a href="{{ url_for('logout') }}">Вийти</a></p>
+            {% else %}
+            <p  class="header1">Привіт, невідомий користуваче</p>
+            {% endif %}
             <div class="container">
                 <a href="/registration" class="button">Registration</a>
                 <a href="/about" class="button">Information</a>
+                <a href="/accountlogout" class="button">Account</a>
             </div>
     </body>
 </html>

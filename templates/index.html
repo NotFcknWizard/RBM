@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-    <title>Index</title>
-
+    <title>Волейбольний сайт</title>
 </head>
 <body>
-    <form method="POST">
-    <p>Id: {{ reg.id }}</p>
-    <input type="text" name="trainer" value="{{ reg.trainer }}" required>
-    <input type="text" name="place" value="{{ reg.place }}" required>
-    <input type="text" name="price" value="{{ reg.price }}" required>
-    <button type="submit">Apply Changes</button>
-</form>
-
+    <header>
+        <h1 class="header1">Волейбольний сайт</h1>
+    </header>
+    <main>
+        <h1 class="header1">Ласкаво просимо на сайт</h1>
+        
+        {% if current_user.is_authenticated %}
+            <p clsass ="header1">Привіт, {{ current_user.username }}! Ти зареєстрований на сайті</p>
+        <div class = "container">
+            <a href="{{ url_for('home') }}" class ="button">На головну</a>
+            <a href="{{ url_for('logout') }}" class ="button">Вийти</a>
+        </div>
+        {% else %}
+        <div class = "container">
+            <a href="{{ url_for('login') }}" class ="button">Логін</a>
+            <a href="{{ url_for('register') }}" class ="button">Реєстрація</a>
+        </div>
+        {% endif %}
+    </main>
 </body>
 </html>
+
+
